@@ -16,3 +16,34 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+.btn {
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  margin-left: 10px;
+}
+
+#option-box {
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+#option-box:hover,
+#option-box:focus {
+  outline: none;
+}
+
+.input-color {
+  border: none;
+  padding: 0;
+  height: 40px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.btn:hover,
+.btn:focus {
+  outline: none;
+}

@@ -1,5 +1,7 @@
+const displayDiv = document.querySelector(".display-color");
+const inputColor = document.querySelector(".input-color");
 fetch(
-  "https://www.thecolorapi.com/scheme?hex=0047AB&rgb=0,71,171&hsl=215,100%,34%&cmyk=100,58,0,33&format=html&mode=analogic&count=6",
+  `https://www.thecolorapi.com/scheme?hex=${inputColor}&format=json&mode=analogic&count=5`,
   {
     method: "GET",
     headers: {
@@ -7,5 +9,12 @@ fetch(
     },
   }
 )
-  .then((resp) => resp.json())
-  .then((data) => console.log(Data));
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status:${response.status}`);
+    }
+
+    return response.json();
+  })
+  .then((data) => console.log(data))
+  .catch((error) => console.error("Fetch error:", error));
