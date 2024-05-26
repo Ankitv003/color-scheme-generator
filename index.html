@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
+    <link rel="icon" href="./color-generator-favicon.png" />
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Scheme Generator</title>
   </head>
   <body>
+    <button
+      class="toggle-mode"
+      type="button"
+      data-theme-toggle
+      aria-label="Change to light theme"
+    ></button>
     <div class="container">
-      <input type="color" class="input-color" />
-      <select name="option-box" id="option-box">
-        <option value="monochrome">Monochrome</option>
-        <option value="monochrome-dark">Monochrome-Dark</option>
-        <option value="monochrome-light">Monochrome-Light</option>
-        <option value="analogic">Analogic</option>
-        <option value="complement">Complement</option>
-        <option value="analogic-complement">Analogic-Complement</option>
-        <option value="triad">Triad</option>
-        <option value="quad">Quad</option>
-      </select>
-      <button class="btn">Get Color Scheme</button>
+      <form id="colour-picker-form">
+        <input type="color" class="input-color" />
+        <select name="option-box" id="option-box">
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-Dark</option>
+          <option value="monochrome-light">Monochrome-Light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-Complement</option>
+          <option value="triad">Triad</option>
+          <option value="quad">Quad</option>
+        </select>
+        <button class="btn">Get Color Scheme</button>
+      </form>
+
+      <div id="colour-column-1" class="colour-column">
+        <div id="colour-1"></div>
+        <p id="colour-1-text">#FFFFFF</p>
+      </div>
+      <div id="colour-column-2" class="colour-column">
+        <div id="colour-2"></div>
+        <p id="colour-2-text">#FFFFFF</p>
+      </div>
+      <div id="colour-column-3" class="colour-column">
+        <div id="colour-3"></div>
+        <p id="colour-3-text">#FFFFFF</p>
+      </div>
+      <div id="colour-column-4" class="colour-column">
+        <div id="colour-4"></div>
+        <p id="colour-4-text">#FFFFFF</p>
+      </div>
+      <div id="colour-column-5" class="colour-column">
+        <div id="colour-5"></div>
+        <p id="colour-5-text">#FFFFFF</p>
+      </div>
     </div>
-    <div id="display-color"></div>
 
     <script src="index.js" type="module"></script>
   </body>
