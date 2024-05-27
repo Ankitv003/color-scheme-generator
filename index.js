@@ -9,6 +9,7 @@ formButton.addEventListener("click", function (e) {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  inputColor.value = "#f90606";
   fetchColors();
 });
 
