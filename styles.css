@@ -10,14 +10,32 @@ body {
   background-color: #1f2937;
   font-family: Inter, sans-serif;
   height: 100%;
+  overflow: hidden;
 }
 
 .container {
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-template-columns: repeat(5, 1fr);
   min-height: 100vh; /* Using min-height prevents content overflow, allowing element to expand beyond viewport height if needed */
 }
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  color: wheat;
+  grid-column: span 5;
+  padding: 0.5em 1em;
+}
+
+.navbar h2 {
+  margin-left: 1em;
+  white-space: nowrap;
+}
+.navbar button {
+  margin-right: 1em;
+}
+
 #colour-picker-form {
   padding: 1.5em 0.875em;
   background-color: #1f2937;
@@ -25,6 +43,7 @@ body {
   gap: 0.75em;
   justify-content: center;
   align-items: center;
+  grid-row: 2;
   grid-column: span 5;
   margin: 0;
 }
@@ -67,6 +86,7 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   cursor: pointer;
+  transition: filter 0.5s ease-in-out;
 }
 
 .colour-column > p {
@@ -75,6 +95,13 @@ body {
   color: #fff;
   font-size: 0.75rem;
   font-weight: 500;
+}
+.colour-column:hover {
+  scale: 1.02;
+  border: 2px solid black;
+}
+.colour-column:active {
+  filter: brightness(0.6);
 }
 
 #colour-1 {
@@ -118,8 +145,8 @@ body {
   align-items: center;
   border: 1px solid #d1d5db;
   width: 20%;
-  margin: 0 auto;
 }
+
 [data-theme="light"] {
   body {
     background-color: #fff;
@@ -137,11 +164,17 @@ body {
   #option-box {
     border: 3px solid #d1d5db;
   }
+  .navbar {
+    color: #1f2937;
+  }
 }
 
 @media (max-width: 500px) {
   .copy-message {
     font-size: 0.8rem;
     white-space: nowrap;
+  }
+  .navbar h2 {
+    margin-left: 0.3em;
   }
 }

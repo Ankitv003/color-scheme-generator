@@ -51,7 +51,7 @@ function copyHexCode(event) {
       .writeText(hexCode)
       .then(() => {
         const message = document.createElement("div");
-        message.textContent = `Copied ${hexCode} to clipboard`;
+        message.textContent = `Copied ${hexCode}😁`;
         message.classList.add("copy-message");
         document.body.appendChild(message);
 
