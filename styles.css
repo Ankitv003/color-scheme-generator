@@ -177,4 +177,7 @@ body {
   .navbar h2 {
     margin-left: 0.3em;
   }
+  body {
+    overflow-y: scroll;
+  }
 }
